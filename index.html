@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love ❤️</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.card{
+    background:white;
+    width:90%;
+    max-width:600px;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+h1{
+    color:#ff4d6d;
+    font-size:2.2rem;
+}
+
+.photo{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #ff4d6d;
+    margin:15px 0;
+}
+
+.message{
+    font-size:1.1rem;
+    line-height:1.8;
+    color:#444;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#ff4d6d;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#e63956;
+}
+
+.footer{
+    margin-top:25px;
+    color:#777;
+    font-size:0.9rem;
+}
+
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.heart{
+    position:absolute;
+    color:red;
+    animation:float 6s linear infinite;
+    font-size:20px;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="card">
+
+    <h1>🎂 Happy Birthday My Love ❤️</h1>
+
+    <img class="photo"
+    src="https://drive.google.com/file/d/1gFCkaSL44qpzGc22cgOueWFYoub_3iLP/view?usp=sharing"
+    alt="Birthday Girl">
+
+    <div class="message">
+        Dear <b>Meri Pyari Betu ❤️😊 </b>, ❤️<br><br>
+
+        On this special day, I just want to tell you how lucky I am to have you in my life.
+
+        Your smile brightens my darkest days,
+        your love makes my world beautiful,
+        and every moment with you becomes a precious memory.
+
+        May your birthday be filled with happiness,
+        laughter, success, and all the love you deserve.
+
+        Thank you for being the most beautiful part of my life.
+
+        💖 Happy Birthday Once Again 💖
+    </div>
+
+    <a href="#" class="btn">I Love You ❤️</a>
+
+    <div class="footer">
+        Made with Love by Dwivedii Jii
+    </div>
+
+</div>
+
+<script>
+function createHeart(){
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML='❤️';
+    heart.style.left=Math.random()*100+'vw';
+    heart.style.fontSize=(Math.random()*20+15)+'px';
+    heart.style.animationDuration=(Math.random()*3+3)+'s';
+    document.getElementById('hearts').appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },6000);
+}
+
+setInterval(createHeart,300);
+</script>
+
+</body>
+</html>
